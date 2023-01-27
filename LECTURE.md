@@ -142,6 +142,7 @@ try (var session = driver.session(sessionConfig)) {
 4. Durable
 - Der Driver bietet 3 Typen von Transaktionen an:
 1. Auto-commit Transactions: Einzelne Einheit die direkt ausgeführt wird, soll nicht mit Neo4j-Klustern genutzt werden
+- Standard Zugriffsmodus ist WRITE, executeRead() bzw. executeWrite() überschreibt den Wert
 ```
 var query = "MATCH () RETURN count(*) AS count";
 var params = Values.parameters();
@@ -149,6 +150,7 @@ var params = Values.parameters();
 var res = session.run(query, params).single().get("count").asLong();
 ```
 2. Read Transactions: Zum lesen
+- executeRead()
 ```
 // Run a query within a Read Transaction
 var res = session.readTransaction(tx -> {
