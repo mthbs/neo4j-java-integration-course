@@ -4,7 +4,7 @@
 - Besseres Verständnis von Lambda und seiner Syntax
 - Das Einsatzgebiet von Lambdas verstehen
 - Iterator und Iterable verstehen
-- Die Funktionen und Funktionsweise von Maps und Streams verstehen
+- Die Methoden und Funktionsweise von Streams verstehen und anwenden können
 
 # Lambda Audrücke
 
@@ -91,6 +91,4 @@ public static int factorial( int n ){
 | Arrays.sort(T[] a, COmparator c)         | Nimmt eine Funktion als Argument an.                    |
 | Collections.reverseOrder(Comparator cmp) | Nimmt eine Funktion an und liefert auch eine zurück.    |
 
-## Viele Schnittstellen von java.util.function
-
-### Pause bei Seite 823, wegen Übergang zum Thema Iterator
+### Pause bei Seite 823, wegen Übergang zum Thema Iterator und Maps
