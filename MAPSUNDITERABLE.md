@@ -192,8 +192,6 @@ class WordIterable implements Iterable<String<, Iterator<String> {
 - Dieses Array hat am Anfang eine feste Größe
 - Wenn eine Anfrage gestellt wird, muss einfach diese Berechnung erfolgen und wir können an dieser Stelle nachsehen.
 
-# Innere Schnittstellen/ Klassen, Static, ...
-
 
 
 
