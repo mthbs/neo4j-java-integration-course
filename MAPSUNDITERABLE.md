@@ -91,4 +91,118 @@ class WordIterable implements Iterable<String<, Iterator<String> {
 } 
 ```
 
-# Weitermachen Buch Orange Seite 1009 HashMap und TreeMap
+# Maps
+
+- Die wichtigsten Funktionen:
+
+|                                                                 Map <K,V> |
+|--------------------------------------------------------------------------:|
+|                                                               size(): int |
+|                                                        isEmpty(): boolean |
+|                                              containsKey(Object): boolean |
+|                                            containsValue(Object): boolean |
+|                                                            get(Object): V |
+|                                                              put(K, V): V |
+|                                                         remove(Object): V |
+|                               putAll(Map<? extends K, ? extends V>): void |
+|                                                             clear(): void |
+|                                                          keySet(): Set<K> |
+|                                                   values(): Collection<V> |
+|                                              entrySet(): Set<Entry<K, V>> |
+|                                                   equals(Object): boolean |
+|                                                           hashCode(): int |
+|                                               getOrDefault (Object, V): V |
+|                            forEach(BiConsumer<? super K, ? super V>: void |
+|           replaceAll(BiFunction<? super K, ß super V, ß extends V>): void |
+|                                                      putIfAbsent(K, V): V |
+|                                           remove(Object, Object): boolean |
+|                                                 replace(K, V, V): boolean |
+|                                                          replace(K, V): V |
+|                   computeIfAbsent(K, Function<? super K, ? extends V>): V |
+|     computeIfPresent(K, BiFunction<? super K, ? super V, ? extends V>): v |
+|               compute(K,BiFunction<? super K, ? super V, ? extends V>): V |
+|               merge(K,V,BiFunction<? super K, ? super V, ? extends V>): V |
+|                                                           of(): Map<K, V> |
+|                                                       of(K, V): Map<K, V> |
+|                                                 of(K, V, K, V): Map<K, V> |
+|                                                                       ... |
+| of(K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V, K, V): Map<K, V> |
+|                    ofEntries(Entry[]<? extends K, ? extends V): Map<K, V> |
+|                                                  entry(K, V): Entry<K, V> |
+
+| Entry                                                           |
+|-----------------------------------------------------------------|
+| getKey(): K                                                     |
+| getValue(): V                                                   |
+| setValue(V): V                                                  |
+| equals(Object): boolean                                         |
+| hashCode(): int                                                 |
+| comparingByKey(): Comparator<Entry<K, V>>                       |
+| comparingByValue(): Comparator<Entry<K, V>>                     |
+| comparingByKey(Comparator<? super K>): Comparator<Entry<K, V>>  |
+| comparingByValue(Comparator<? super V>): Comparator<Entry<K,V>> |
+
+
+
+
+- gehören zur Gruppe der Assoziativen Speichers (Key-Value-Paare)
+- put(key,value)
+- get(key)
+
+## HashMap
+
+- EIne schnelle Implementierung der Hash-Tabelle
+  - Dabei müssen Schlüsselobjekte "hashbar" sein und damit equals() und hashCode() implementieren.
+- Ideal um Werte schnell nach dem Schlüssel zu suchen, die Schlüssel werden nicht sortiert
+- In allen HashMaps wird davor gewarnt Werte nachträglich zu verändern.
+
+## TreeMap
+
+- ETwas langsamer im Zugriff als HashMap
+- Hält immer alle Schlüsselobjekte sortiert
+  - Die Elemente werden in einen internen Binärbaum sortiert, dabei müssen sich die Schlüssel in eine Ordnung bringen lassen
+- Eine Ordnung zwischen den Elementen muss her, entweder mit Comparable oder Comparator
+
+## LinkedHashMap
+
+- HashMap mit gleichzeitiger Speicherung der Reihenfolge
+
+## Ansichten der Maps
+
+- Eine Map kann auf drei Arten Sammlungen zurückgeben, über die sich iterieren lässt:
+
+|                                                                                                             Map-Ansichten | 
+|--------------------------------------------------------------------------------------------------------------------------:|
+|                                                                                 keySet() liefert eine Menge der Schlüssel |
+|                                                                                values() liefert eine Collection der Werte |
+| entrySet() liefert eine Menge mit Map.Entry-Objekten. Die Map.Entry-Objekte speichern gleichzeitig den Key und den Value. |
+
+## Map.Entry-Objekte
+
+- Sinn: Momentaufnahme
+- ENtry ist eine innere Schnittstelle von Map
+  - deklariert eine API für den Zugriff auf Key-Value-Paare
+  - Unbedingte Methoden: getKey(), getValue()
+  - Optionale Methode: setValue()
+- bieten Zugriff auf die Schlüssel und Werte
+
+# Die Arbeitsweise einer Hash-Tabelle
+
+- Nach dem Schlüssel wird nach der mathematischen Hash-Funktion ein Hashwert (auch Hashcode genannt) berechnet, dieser dient als Index für ein internes Array.
+- Dieses Array hat am Anfang eine feste Größe
+- Wenn eine Anfrage gestellt wird, muss einfach diese Berechnung erfolgen und wir können an dieser Stelle nachsehen.
+
+# Innere Schnittstellen/ Klassen, Static, ...
+
+
+
+
+
+
+
+
+
+
+
+
+
