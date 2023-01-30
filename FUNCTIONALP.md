@@ -91,4 +91,24 @@ public static int factorial( int n ){
 | Arrays.sort(T[] a, COmparator c)         | Nimmt eine Funktion als Argument an.                    |
 | Collections.reverseOrder(Comparator cmp) | Nimmt eine Funktion an und liefert auch eine zurück.    |
 
-### Pause bei Seite 823, wegen Übergang zum Thema Iterator und Maps
+# Comparator
+
+```
+Comparator.naturalOrder();
+```
+
+# Stream-API
+
+- Die Aufgabe ist es die Daten komfortabel zu erfragen
+- Im Zentrum stehen Funktionen zum Filtern, Abbilden und Reduzieren von Daten.
+- parallelStream() ist günstig für die Arbeit mit Threads
+- collect(): Ergebnisse in einen Container schreiben
+- map(): z.B.: map( Integer::toUnsignedString )
+- Gruppieren
+  - collect(Collectors.groupingBy( Thread::getState )); --> Map<Thread.State, List<Thread>>
+- sorted()
+- filter()
+  - lässt alle Elemente da, die dem Kriterium genügen. If-Pardon.
+- distinct
+
+# Pause bei Seite 823, wegen Übergang zum Thema Iterator und Maps
